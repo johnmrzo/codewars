@@ -11,11 +11,10 @@ function expandedForm(num) {
     let res = ""
     let mod = 10
     while (num !== 0) {
-      if (num % mod !== 0) {
-        res = (num % mod) + " + " + res 
-      }
+        if (num % mod !== 0) {
+            res = (num % mod) + " + " + res 
+        }
         num -= (num % mod)
-      console.log(num)
         mod *= 10
     }
     return res.slice(0,-3)
