@@ -6,3 +6,17 @@
 // expandedForm(70304); // Should return '70000 + 300 + 4'
 // NOTE: All numbers will be whole numbers greater than 0.
 
+
+function expandedForm(num) {
+    let res = ""
+    let mod = 10
+    while (num !== 0) {
+      if (num % mod !== 0) {
+        res = (num % mod) + " + " + res 
+      }
+        num -= (num % mod)
+      console.log(num)
+        mod *= 10
+    }
+    return res.slice(0,-3)
+}
