@@ -15,6 +15,13 @@
 // count the letter, check if occurs > 1 => return false
 // outside the loop => return true
 
+// Solution 1
+function isIsogram(str){
+    return new Set(str.toUpperCase()).size == str.length
+}
+
+
+// Solution 2
 function isIsogram(str){
     strArr = str.toLowerCase().split("")
     for (let i = 0; i < strArr.length; i++) {
