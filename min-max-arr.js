@@ -11,10 +11,12 @@
 // Remarks
 // All arrays or lists will always have at least one element, so you don't need to check the length. Also, your function will always get an array or a list, you don't have to check for null, undefined or similar.
 
+// Solution 1
+function minMax(arr){
+    return [Math.min(...arr), Math.max(...arr)]
+}
 
-
-
-
+// Solution 2
 var min = function(list){
     let minimum = list[0]
     for (let i = 1; i < list.length; i++) {
