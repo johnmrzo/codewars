@@ -8,6 +8,7 @@
 // Notes
 // Assertion messages may be unclear about what they display in some languages. If you read "...It Should encode XXX", the "XXX" is the expected result, not the input!
 
+// Solution 1
 function isDuplicate(letter, word) {
     let count = 0
     word.split("").forEach(i => {
@@ -24,4 +25,15 @@ function duplicateEncode(word){
     word.split("").forEach(i => isDuplicate(i, word)? res += ")": res += "("
     )
     return res
+}
+
+// Solution 2
+function duplicateEncode(word){
+    return word
+        .toLowerCase()
+        .split('')
+        .map( function (a, i, w) {
+        return w.indexOf(a) == w.lastIndexOf(a) ? '(' : ')'
+        })
+        .join('');
 }
