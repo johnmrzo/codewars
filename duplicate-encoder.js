@@ -44,3 +44,7 @@ const duplicateEncode = s => s
   .split``
   .map((e, _, a) => a.indexOf(e) === a.lastIndexOf(e) ? '(' : ')')
   .join``;
+
+
+// Solution 4
+const duplicateEncode = w => w.replace(/./g, c => (new RegExp(`([${c}]).*\\1`, 'gi')).test(w) ? ')' : '(');
