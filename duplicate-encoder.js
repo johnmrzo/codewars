@@ -48,3 +48,10 @@ const duplicateEncode = s => s
 
 // Solution 4
 const duplicateEncode = w => w.replace(/./g, c => (new RegExp(`([${c}]).*\\1`, 'gi')).test(w) ? ')' : '(');
+
+// Solution 5
+const duplicateEncode = word => (word = word.toLowerCase())
+  .split``
+  .map(e => word.indexOf(e) === word.lastIndexOf(e) ? '(' : ')')
+  .join``;
+
